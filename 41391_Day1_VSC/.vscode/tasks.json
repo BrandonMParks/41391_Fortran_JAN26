@@ -1,0 +1,20 @@
+{
+  "version": "0.0.1",
+  "tasks": [
+    {
+      "label": "Build Fortran",
+      "type": "shell",
+      "command": "gfortran *.f90 -o example_mod.exe",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Run Fortran",
+      "type": "shell",
+      "command": ".\\example_mod.exe",
+      "dependsOn": "Build Fortran"
+    }
+  ]
+}
