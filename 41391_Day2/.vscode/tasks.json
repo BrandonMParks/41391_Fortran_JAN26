@@ -1,0 +1,21 @@
+{
+  "version": "0.0.1",
+  "tasks": [
+    {
+      "label": "Build Fortran",
+      "type": "shell",
+      "command": "gfortran matlab_io.f90 time_stepping.f90",
+      "command": "gfortran example_mod.f90 -o example_mod.exe",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Run Fortran",
+      "type": "shell",
+      "command": ".\\example_mod.exe",
+      "dependsOn": "Build Fortran"
+    }
+  ]
+}
