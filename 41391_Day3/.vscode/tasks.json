@@ -1,0 +1,25 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build Fortran",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-NoProfile",
+        "-Command",
+        "if (!(Test-Path bin)) { New-Item -ItemType Directory -Path bin | Out-Null }; gfortran -O3 -Wall precision.f90 matlab_io.f90 transfer.f90 alloc_field.f90 main.f90 -o bin\\main.exe"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Run Fortran",
+      "type": "shell",
+      "command": ".\\bin\\main.exe",
+      "dependsOn": "Build Fortran"
+    }
+  ]
+}

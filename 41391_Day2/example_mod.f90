@@ -30,7 +30,6 @@ field2(1,:) = 1.0
 field2(Nx,:) = 1.0
 field2(:,1) = 1.0
 field2(:,Ny) = 1.0
-!field1(:,:) = field2(:,:)
 
 ! Perform time stepping
 DO istep=1,nstep
