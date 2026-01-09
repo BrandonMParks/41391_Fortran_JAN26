@@ -1,0 +1,3 @@
+-   Added folder for Exercise #4a and subsequent code.
+-   Made a mistake in not making a new folder for Exercise 5. The main code folder in Day4 also contains Exercise 5 solutions. This is acceptable as the only difference is where the inputs come from, and Exercise #4b can still be seen implemented and is clearly different from Day3.
+-   

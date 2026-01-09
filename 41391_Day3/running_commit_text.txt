@@ -1,8 +1,1 @@
--   Changed file names to better represent their functions
--   Added "Makefile_learn" provided in Learn.
--   Created personal "makefile"
--   Created folder "3a" containing source code for Exercise #3a
--   Added functionality to automatically make a new results time-stamped folder for each code execution output so outputs don't get mixed
--   Added new module file "alloc_field" to initially allocate the field arrays
--   Added new "precision" module to globally set the precision for the entire code run. I'm thinking this makes the overloading concept as described in Exercise #3b redundant/unnecessary...
--   Added comment lines to visually separate different subroutines and code sections
+-   

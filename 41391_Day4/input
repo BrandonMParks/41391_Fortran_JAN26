@@ -1,0 +1,18 @@
+! Input file for main.f90 (Fortran NAMELIST)
+! Note: Fortran uses '%' for derived-type components (inp%nx), not '.' (inp.nx).
+
+&inputs
+	inp%nx = 21
+	inp%ny = 21
+	inp%lx = 1.0
+	inp%ly = 1.0
+
+	inp%nstep = 200
+	inp%diff = 1.0
+	inp%safety = 1.0
+	inp%output_every = 10
+
+	! Optional: if set to > 0, main will use it directly.
+	! Otherwise (default inp%dt = -1), main computes dt = safety*dt_limit.
+	! inp%dt = 0.0001
+/
