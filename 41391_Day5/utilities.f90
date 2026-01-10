@@ -1,12 +1,14 @@
 MODULE utilities
 
 USE precision, ONLY: wp
+USE matlab_io, ONLY: get_run_output_dir
 
 IMPLICIT NONE
 
 PUBLIC :: stopwatch
 PUBLIC :: input
 PUBLIC :: input_t
+PUBLIC :: diag_min_field
 PRIVATE
 
     TYPE :: input_t
@@ -96,5 +98,32 @@ CONTAINS
             stop
         end select
     END SUBROUTINE stopwatch
+
+    SUBROUTINE diag_min_field(field, time)
+        REAL(wp), INTENT(IN) :: field(:,:)
+        REAL(wp), INTENT(IN) :: time
+
+        INTEGER, SAVE :: unit = -1
+        LOGICAL, SAVE :: is_open = .FALSE.
+        INTEGER :: ios
+        REAL(wp) :: field_min
+        CHARACTER(LEN=:), ALLOCATABLE :: out_dir
+        CHARACTER(LEN=:), ALLOCATABLE :: diag_path
+
+        IF (.NOT. is_open) THEN
+            CALL get_run_output_dir(out_dir)
+            diag_path = TRIM(out_dir) // '/diag.dat'
+            OPEN(NEWUNIT=unit, FILE=TRIM(diag_path), STATUS='REPLACE', ACTION='WRITE', IOSTAT=ios)
+            IF (ios /= 0) THEN
+                WRITE(*,'(A,1X,A)') 'ERROR: could not open diagnostic file for writing:', TRIM(diag_path)
+                ERROR STOP
+            END IF
+            is_open = .TRUE.
+        END IF
+
+        field_min = MINVAL(field)
+        WRITE(unit,'(E0.4,1X,E0.4)') time, field_min
+        FLUSH(unit)
+    END SUBROUTINE diag_min_field
 
 END MODULE utilities

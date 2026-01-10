@@ -71,6 +71,11 @@ DO istep=1,inp%nstep
    ! Advance solution
    call advance_solution(field2, field1)
 
+   ! Diagnostics every 10 time steps (written directly to disk)
+   IF (MOD(istep, 10) == 0) THEN
+      CALL diag_min_field(field2, inp%dt*REAL(istep, KIND=wp))
+   ENDIF
+
    ! Output every few time steps
    IF (MOD(istep, inp%output_every) == 0) THEN
       call write_matlab_field('field.m', field2, inp%dt*REAL(istep, KIND=wp))

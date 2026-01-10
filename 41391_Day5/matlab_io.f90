@@ -5,6 +5,7 @@ MODULE matlab_io
   PRIVATE
 
   PUBLIC :: write_matlab_field
+  PUBLIC :: get_run_output_dir
   INTERFACE
     INTEGER(C_INT) FUNCTION WinCreateDir(lpPathName, lpSecurityAttributes) BIND(C, NAME='CreateDirectoryA')
       USE iso_c_binding
@@ -16,6 +17,64 @@ MODULE matlab_io
   LOGICAL, SAVE :: run_dir_initialized = .FALSE.
   INTEGER, SAVE :: field_write_count = 0
 CONTAINS
+
+!-------------------------------------------------------------
+  SUBROUTINE init_run_output_dir()
+    CHARACTER(LEN=8) :: datestr
+    CHARACTER(LEN=10) :: timestr
+    CHARACTER(LEN=15) :: folder_stamp
+    LOGICAL :: exists
+    CHARACTER(LEN=256) :: cmd_path
+    CHARACTER(KIND=C_CHAR, LEN=256) :: cpath
+    INTEGER(C_INT) :: wres
+    INTEGER :: k, n
+
+    IF (run_dir_initialized) RETURN
+
+    ! Ensure base ./output exists
+    cmd_path = 'output'
+    INQUIRE(FILE=TRIM(cmd_path), EXIST=exists)
+    IF (.NOT. exists) THEN
+      n = LEN_TRIM(cmd_path)
+      cpath = C_NULL_CHAR
+      DO k = 1, n
+        cpath(k:k) = TRANSFER(cmd_path(k:k), cpath(k:k))
+      END DO
+      cpath(n+1:n+1) = C_NULL_CHAR
+      wres = WinCreateDir(cpath, C_NULL_PTR)
+    END IF
+
+    CALL DATE_AND_TIME(date=datestr, time=timestr)
+    folder_stamp = datestr(7:8)//'_'//datestr(5:6)//'_'//datestr(3:4)//'_'// &
+                   timestr(1:2)//timestr(3:4)//timestr(5:6)
+    run_output_dir = 'output/' // folder_stamp
+
+    cmd_path = 'output\' // folder_stamp
+    INQUIRE(FILE=TRIM(cmd_path), EXIST=exists)
+    IF (.NOT. exists) THEN
+      n = LEN_TRIM(cmd_path)
+      cpath = C_NULL_CHAR
+      DO k = 1, n
+        cpath(k:k) = TRANSFER(cmd_path(k:k), cpath(k:k))
+      END DO
+      cpath(n+1:n+1) = C_NULL_CHAR
+      wres = WinCreateDir(cpath, C_NULL_PTR)
+      INQUIRE(FILE=TRIM(cmd_path), EXIST=exists)
+      IF (.NOT. exists) THEN
+        PRINT*, 'Warning: could not create output subfolder: ', TRIM(run_output_dir)
+      END IF
+    END IF
+
+    run_dir_initialized = .TRUE.
+    field_write_count = 0
+  END SUBROUTINE init_run_output_dir
+
+!-------------------------------------------------------------
+  SUBROUTINE get_run_output_dir(dir)
+    CHARACTER(LEN=:), ALLOCATABLE, INTENT(OUT) :: dir
+    CALL init_run_output_dir()
+    dir = run_output_dir
+  END SUBROUTINE get_run_output_dir
 
 !-------------------------------------------------------------
   SUBROUTINE write_matlab_field(filename, field, timestamp)
@@ -30,15 +89,6 @@ CONTAINS
     CHARACTER(LEN=32) :: tstamp
     INTEGER :: dotpos
     INTEGER :: tint, tfrac
-    CHARACTER(LEN=8) :: datestr
-    CHARACTER(LEN=10) :: timestr
-    CHARACTER(LEN=15) :: folder_stamp
-    LOGICAL :: exists
-    ! INTEGER :: exitstat
-    CHARACTER(LEN=256) :: cmd_path
-    CHARACTER(KIND=C_CHAR, LEN=256) :: cpath
-    INTEGER(C_INT) :: wres
-    INTEGER :: k, n
     LOGICAL :: fields_exists, plot_exists
     CHARACTER(LEN=512) :: fields_filename
     CHARACTER(LEN=512) :: plot_filename
@@ -61,46 +111,7 @@ CONTAINS
 
     WRITE(tstamp,'(I2.2,"_",I4.4)') tint, tfrac
 
-    ! Initialize per-run output subfolder once, named DD_MM_YY_HHMMSS
-    IF (.NOT. run_dir_initialized) THEN
-      ! Ensure base ./output exists
-      cmd_path = 'output'
-      INQUIRE(FILE=TRIM(cmd_path), EXIST=exists)
-      IF (.NOT. exists) THEN
-        n = LEN_TRIM(cmd_path)
-        cpath = C_NULL_CHAR
-        DO k = 1, n
-          cpath(k:k) = TRANSFER(cmd_path(k:k), cpath(k:k))
-        END DO
-        cpath(n+1:n+1) = C_NULL_CHAR
-        wres = WinCreateDir(cpath, C_NULL_PTR)
-      END IF
-
-      CALL DATE_AND_TIME(date=datestr, time=timestr)
-      folder_stamp = datestr(7:8)//'_'//datestr(5:6)//'_'//datestr(3:4)//'_'// &
-                     timestr(1:2)//timestr(3:4)//timestr(5:6)
-      run_output_dir = 'output/' // folder_stamp
-
-      cmd_path = 'output\' // folder_stamp
-      INQUIRE(FILE=TRIM(cmd_path), EXIST=exists)
-      IF (.NOT. exists) THEN
-        ! Try Windows API CreateDirectoryA for robust creation
-        n = LEN_TRIM(cmd_path)
-        cpath = C_NULL_CHAR
-        DO k = 1, n
-          cpath(k:k) = TRANSFER(cmd_path(k:k), cpath(k:k))
-        END DO
-        cpath(n+1:n+1) = C_NULL_CHAR
-        wres = WinCreateDir(cpath, C_NULL_PTR)
-        INQUIRE(FILE=TRIM(cmd_path), EXIST=exists)
-        IF (.NOT. exists) THEN
-          PRINT*, 'Warning: could not create output subfolder: ', TRIM(run_output_dir)
-        END IF
-      END IF
-
-      run_dir_initialized = .TRUE.
-      field_write_count = 0
-    END IF
+    CALL init_run_output_dir()
 
     fields_filename = TRIM(run_output_dir) // '/fields_data.m'
     plot_filename   = TRIM(run_output_dir) // '/plot_fields.m'
