@@ -1,0 +1,4 @@
+-   Added folders for Week 2/Day 6 work
+-   Day6 folder now contains Day5 code in the .\obs\ folder
+-   Added ".\main.f90" to compute the integral shown in Week 2, Exercise 1 "ex1_autopar_openmp.pdf"
+-   
