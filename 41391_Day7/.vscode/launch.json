@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run example_mod.exe (build first)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}\\example_mod.exe",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "Build Fortran",
+      "stopAtEntry": false,
+      "externalConsole": false,
+      "MIMode": "gdb"
+    }
+  ]
+}

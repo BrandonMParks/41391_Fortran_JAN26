@@ -1,0 +1,13 @@
+! Input file for main.f90 (Fortran NAMELIST)
+
+&inputs
+	inp%nx = 21
+	inp%ny = 21
+	inp%lx = 1.0
+	inp%ly = 1.0
+
+	inp%nstep = 200
+	inp%diff = 1.0
+	inp%safety = 1.0
+	inp%output_every = 5
+/
