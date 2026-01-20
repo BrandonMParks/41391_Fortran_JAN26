@@ -1,8 +1,0 @@
-&INPUT
-   N = 50
-   itermax = 10000
-   T0 = 0.
-   tolerance = 1e-5
-   output = 5
-   algorithm = 1
-/
