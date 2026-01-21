@@ -1,0 +1,179 @@
+=== Job 27653076 started (index=0) ===
+Working directory: /zhome/b5/a/202220/41391/Assignment1/seq
+Hostname: n-62-21-46
+Start time: Mon Jan 19 13:29:51 CET 2026
+Cores allocated by LSF (-n) = 24
+
+===== Running sweep case: threads=1 =====
+Time: Mon Jan 19 13:29:51 CET 2026
+ Starting Poisson 3D solver with the following parameters:
+   N (interior grid size)      =          100
+   itermax (max iterations)    =         5000
+   convergence tolerance       =    1.0000000000000001E-005
+   Iterative algorithm         =            1
+   OpenMP                      =  (not used in this code version)
+ Solving...
+Entering jacobi (sequential poisson_methods; no OpenMP regions)
+jacobi: iter=100 diffmax= 3.44325E-02
+jacobi: iter=200 diffmax= 1.71869E-02
+jacobi: iter=300 diffmax= 1.14924E-02
+jacobi: iter=400 diffmax= 8.61357E-03
+jacobi: iter=500 diffmax= 6.89463E-03
+jacobi: iter=600 diffmax= 5.74796E-03
+jacobi: iter=700 diffmax= 4.92365E-03
+jacobi: iter=800 diffmax= 4.31376E-03
+jacobi: iter=900 diffmax= 3.83636E-03
+jacobi: iter=1000 diffmax= 3.46059E-03
+jacobi: iter=1100 diffmax= 3.15496E-03
+jacobi: iter=1200 diffmax= 2.90242E-03
+jacobi: iter=1300 diffmax= 2.69267E-03
+jacobi: iter=1400 diffmax= 2.51528E-03
+jacobi: iter=1500 diffmax= 2.36445E-03
+jacobi: iter=1600 diffmax= 2.23546E-03
+jacobi: iter=1700 diffmax= 2.12511E-03
+jacobi: iter=1800 diffmax= 2.03066E-03
+jacobi: iter=1900 diffmax= 1.94888E-03
+jacobi: iter=2000 diffmax= 1.87539E-03
+jacobi: iter=2100 diffmax= 1.80492E-03
+jacobi: iter=2200 diffmax= 1.73456E-03
+jacobi: iter=2300 diffmax= 1.66391E-03
+jacobi: iter=2400 diffmax= 1.59351E-03
+jacobi: iter=2500 diffmax= 1.52377E-03
+jacobi: iter=2600 diffmax= 1.45542E-03
+jacobi: iter=2700 diffmax= 1.38856E-03
+jacobi: iter=2800 diffmax= 1.32393E-03
+jacobi: iter=2900 diffmax= 1.26102E-03
+jacobi: iter=3000 diffmax= 1.20084E-03
+jacobi: iter=3100 diffmax= 1.14272E-03
+jacobi: iter=3200 diffmax= 1.08712E-03
+jacobi: iter=3300 diffmax= 1.03395E-03
+jacobi: iter=3400 diffmax= 9.83004E-04
+jacobi: iter=3500 diffmax= 9.34700E-04
+jacobi: iter=3600 diffmax= 8.88501E-04
+jacobi: iter=3700 diffmax= 8.44583E-04
+jacobi: iter=3800 diffmax= 8.02876E-04
+jacobi: iter=3900 diffmax= 7.63104E-04
+jacobi: iter=4000 diffmax= 7.25468E-04
+jacobi: iter=4100 diffmax= 6.89705E-04
+jacobi: iter=4200 diffmax= 6.55650E-04
+jacobi: iter=4300 diffmax= 6.23459E-04
+jacobi: iter=4400 diffmax= 5.92848E-04
+jacobi: iter=4500 diffmax= 5.63721E-04
+jacobi: iter=4600 diffmax= 5.36174E-04
+jacobi: iter=4700 diffmax= 5.09995E-04
+jacobi: iter=4800 diffmax= 4.85091E-04
+jacobi: iter=4900 diffmax= 4.61483E-04
+jacobi: iter=5000 diffmax= 4.39089E-04
+Exiting jacobi (sequential poisson_methods)
+jacobi: total update wall time (s) =  1.8880566909000006E+01
+Checksum slice: y-mid plane index j = 51
+  sum(u)      =  1.9158224986465561E+05
+  min(u)      =  1.6092075802719897E+01
+  max(u)      =  2.0000000000000000E+01
+ poisson3d successfully executed. Exiting...
+
+===== Running sweep case: threads=2 =====
+Time: Mon Jan 19 13:30:11 CET 2026
+ Starting Poisson 3D solver with the following parameters:
+   N (interior grid size)      =          100
+   itermax (max iterations)    =         5000
+   convergence tolerance       =    1.0000000000000001E-005
+   Iterative algorithm         =            1
+   OpenMP                      =  (not used in this code version)
+ Solving...
+Entering jacobi (sequential poisson_methods; no OpenMP regions)
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 27653076: <bmp_hpc_sweep> in cluster <dcc> Exited
+
+Job <bmp_hpc_sweep> was submitted from host <n-62-27-22> by user <bmapa> in cluster <dcc> at Mon Jan 19 13:29:49 2026
+Job was executed on host(s) <24*n-62-21-46>, in queue <hpcintro>, as user <bmapa> in cluster <dcc> at Mon Jan 19 13:29:50 2026
+</zhome/b5/a/202220> was used as the home directory.
+</zhome/b5/a/202220/41391/Assignment1/seq> was used as the working directory.
+Started at Mon Jan 19 13:29:50 2026
+Terminated at Mon Jan 19 13:30:29 2026
+Results reported at Mon Jan 19 13:30:29 2026
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/usr/bin/env bash
+
+set -euo pipefail
+### General options 
+
+# -- specify queue -- 
+#BSUB -q hpcintro
+
+# -- Job name (single job that runs a sequential sweep) --
+#BSUB -J bmp_hpc_sweep
+
+# -- Reserve a full node (24 cores on this machine) --
+#BSUB -n 24
+
+# -- Ensure cores are on the same host -- 
+#BSUB -R "span[hosts=1]"
+
+# -- Memory requirements (2–4 GB) -- 
+#BSUB -R "rusage[mem=8GB]"
+#BSUB -M 8GB
+
+# -- Walltime limit (hh:mm) -- 
+#BSUB -W 00:60 
+
+# -- Email notifications (optional) --
+###BSUB -u bmapa@dtu.dk
+###BSUB -B  # at job start
+###BSUB -N  # at job end
+
+# -- Output and error files --
+#BSUB -oo output/Output_%J.out
+#BSUB -eo output/Error_%J.err
+
+job_id=${LSB_JOBID:-unknown}
+job_index=${LSB_JOBINDEX:-0}
+
+echo "=== Job ${job_id} started (index=${job_index}) ==="
+echo "Working directory: $(pwd)"
+echo "Hostname: $(hostname)"
+echo "Start time: $(date)"
+
+nodeCores=${LSB_DJOB_NUMPROC:-24}
+echo "Cores allocated by LSF (-n) = $nodeCores"
+
+# ----------------------------------------
+# OpenMP settings for reproducible performance
+# ----------------------------------------
+
+# Always print OpenMP runtime configuration
+export OMP_DISPLAY_ENV=verbose
+
+(... more ...)
+------------------------------------------------------------
+
+TERM_OWNER: job killed by owner.
+Exited with exit code 130.
+
+Resource usage summary:
+
+    CPU time :                                   38.96 sec.
+    Max Memory :                                 40 MB
+    Average Memory :                             40.00 MB
+    Total Requested Memory :                     196608.00 MB
+    Delta Memory :                               196568.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                5
+    Run time :                                   39 sec.
+    Turnaround time :                            40 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <output/Error_27653076.err> for stderr output of this job.
+

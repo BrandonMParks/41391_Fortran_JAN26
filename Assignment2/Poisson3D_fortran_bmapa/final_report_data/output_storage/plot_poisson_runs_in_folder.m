@@ -1,0 +1,146 @@
+% plot_poisson_runs_in_folder.m
+%
+% Loads all .mat files in the same folder as this script and plots one
+% curve per run (threads vs GS wall time).
+%
+% Expected format in each .mat:
+%   run.threads
+%   run.wall_time_s
+
+clear all, close all, clc;
+
+scriptDir = fileparts(mfilename('fullpath'));
+listing = dir(fullfile(scriptDir, '*.mat'));
+
+if isempty(listing)
+    error('No .mat files found in: %s', scriptDir);
+end
+
+%% Time plot
+
+figure(65);
+hold on;
+
+fs = 20; lw = 2; ms = 10;
+
+plottedCount = 0;
+
+for k = 1:numel(listing)
+    matPath = fullfile(scriptDir, listing(k).name);
+    S = load(matPath);
+
+    if ~isfield(S, 'run')
+        continue;
+    end
+
+    run = S.run;
+
+    if ~isfield(run, 'threads') || ~isfield(run, 'wall_time_s')
+        continue;
+    end
+
+    if isfield(run, 'label') && ~isempty(run.label)
+        label = run.label;
+    else
+        [~, label, ~] = fileparts(listing(k).name);
+    end
+
+    plot(run.threads, run.wall_time_s, '-o', 'LineWidth', lw, 'MarkerSize', ms, ...
+         'DisplayName', label);
+    plottedCount = plottedCount + 1;
+end
+
+if plottedCount == 0
+    error('No usable run structs found in any .mat in: %s', scriptDir);
+end
+
+xlabel('Recruited worker thread count, $n_{threads}$ [1]','Interpreter','latex');
+% time label
+ylabel('Iterative algorithm section wall time, $t_{par}$ [s]','Interpreter','latex');
+% % speed-up label
+% ylabel('Parallelized speed-up vs. Sequential, $\frac{t_{par}}{t_{seq}}$ [1]','Interpreter','latex');
+grid on;
+legend('Location',  'best');
+% title('Iterative linear solver parallelization speed-ups');
+
+% Manual plot adjustments
+ax = gca;
+ax.FontSize = fs;
+ax.FontName = 'Latex';
+% ax.XScale = 'log';
+hold off;
+
+%% Speed-up plot
+
+figure(66);
+hold on;
+
+% sequential execution wall time, implemented sloppy because time constraint
+jac_seq_wall_time = 18.880566909000006;
+gs_seq_wall_time  = 24.709044970000001;
+
+fs = 20; lw = 2; ms = 10;
+
+plottedCount = 0;
+
+for k = 1:numel(listing)
+    matPath = fullfile(scriptDir, listing(k).name);
+    S = load(matPath);
+
+    if ~isfield(S, 'run')
+        continue;
+    end
+
+    run = S.run;
+
+    if ~isfield(run, 'threads') || ~isfield(run, 'wall_time_s')
+        continue;
+    end
+
+    if isfield(run, 'label') && ~isempty(run.label)
+        label = run.label;
+    else
+        [~, label, ~] = fileparts(listing(k).name);
+    end
+    
+    % Compute speed-ups
+    switch run.alg
+        case 1 % Jacobi
+            run.speed_up = jac_seq_wall_time ./ run.wall_time_s ;
+        case 2 % Gauss-Seidel
+            run.speed_up = gs_seq_wall_time ./ run.wall_time_s ;
+    end
+
+    % Compute GFLOPs
+    run.FLOPS = ( (run.N+2)^3 * run.itermax) ./ run.wall_time_s ./ 1e9 ;
+    run.FLOPS([1 2 4 8 12 16 24])
+
+    plot(run.threads, run.speed_up, '-o', 'LineWidth', lw, 'MarkerSize', ms, ...
+         'DisplayName', label);
+    plottedCount = plottedCount + 1;
+
+end
+
+plot([1 24],[1 24], '--', 'Color', 'k', 'DisplayName', 'Ideal Scaling')
+
+if plottedCount == 0
+    error('No usable run structs found in any .mat in: %s', scriptDir);
+end
+
+xlabel('Recruited worker thread count, $n_{threads}$ [1]','Interpreter','latex');
+% % time label
+% ylabel('Iterative algorithm section wall time, $t_{par}$ [s]','Interpreter','latex');
+% speed-up label
+ylabel('Parallelized speed-up vs. Sequential, $\frac{t_{par}}{t_{seq}}$ [1]','Interpreter','latex');
+grid on;
+legend('Location',  'best');
+% title('Iterative linear solver parallelization speed-ups');
+
+% Manual plot adjustments
+ax = gca;
+ax.FontSize = fs;
+ax.FontName = 'Latex';
+% ax.XScale = 'log';
+hold off;
+
+clear S run matPath listing k plottedCount label scriptDir

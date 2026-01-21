@@ -1,0 +1,34 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build Fortran",
+      "type": "shell",
+      "command": "C:\\msys64\\msys2_shell.cmd",
+      "args": [
+        "-mingw64",
+        "-here",
+        "-no-start",
+        "-c",
+        "make"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Run Fortran",
+      "type": "shell",
+      "command": "C:\\msys64\\msys2_shell.cmd",
+      "args": [
+        "-mingw64",
+        "-here",
+        "-no-start",
+        "-c",
+        "if command -v mpiexec >/dev/null 2>&1; then mpiexec -n 4 ./bin/main.exe; else \"/c/Program Files/Microsoft MPI/Bin/mpiexec.exe\" -n 4 ./bin/main.exe; fi"
+      ],
+      "dependsOn": "Build Fortran"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+# The HPC output files for some reason are not playing nice with git
+# so I will ignore any folder containing them.
+# The source code will still be present so this is acceptable
+
+# Ignore any directory named "output"
+output/
+
+# Ignore "output" directories at any depth
+**/output/
+
+# Ignore any directory whose name starts with "final"
+final*/
+
+# Ignore "final*" directories at any depth
+**/final*/

@@ -1,0 +1,1036 @@
+=== Job 27648877 started (index=0) ===
+Working directory: /zhome/b5/a/202220/41391/Assignment1/jac_par_simple
+Hostname: n-62-21-76
+Start time: Mon Jan 19 11:50:24 CET 2026
+Cores allocated by LSF (-n) = 24
+
+===== Running sweep case: threads=1 =====
+Time: Mon Jan 19 11:50:24 CET 2026
+ Starting Poisson 3D solver with the following parameters:
+   N (interior grid size)      =          250
+   itermax (max iterations)    =         5000
+   convergence tolerance       =    1.0000000000000001E-005
+   Iterative algorithm         =            1
+   OpenMP max threads          =            1
+   OpenMP thread limit         =   2147483647
+   OpenMP dynamic threads      =  F
+ Solving...
+Entering jacobi; about to start first OpenMP region
+OpenMP: jacobi threads used = 1
+jacobi: iter=100 diffmax= 3.44325E-02
+jacobi: iter=200 diffmax= 1.71869E-02
+jacobi: iter=300 diffmax= 1.14924E-02
+jacobi: iter=400 diffmax= 8.61357E-03
+jacobi: iter=500 diffmax= 6.89461E-03
+jacobi: iter=600 diffmax= 5.74775E-03
+jacobi: iter=700 diffmax= 4.92259E-03
+jacobi: iter=800 diffmax= 4.31096E-03
+jacobi: iter=900 diffmax= 3.82954E-03
+jacobi: iter=1000 diffmax= 3.44801E-03
+jacobi: iter=1100 diffmax= 3.13533E-03
+jacobi: iter=1200 diffmax= 2.87363E-03
+jacobi: iter=1300 diffmax= 2.65189E-03
+jacobi: iter=1400 diffmax= 2.46241E-03
+jacobi: iter=1500 diffmax= 2.29835E-03
+jacobi: iter=1600 diffmax= 2.15480E-03
+jacobi: iter=1700 diffmax= 2.02810E-03
+jacobi: iter=1800 diffmax= 1.91545E-03
+jacobi: iter=1900 diffmax= 1.81461E-03
+jacobi: iter=2000 diffmax= 1.72399E-03
+jacobi: iter=2100 diffmax= 1.64204E-03
+jacobi: iter=2200 diffmax= 1.56760E-03
+jacobi: iter=2300 diffmax= 1.49955E-03
+jacobi: iter=2400 diffmax= 1.43705E-03
+jacobi: iter=2500 diffmax= 1.37941E-03
+jacobi: iter=2600 diffmax= 1.32621E-03
+jacobi: iter=2700 diffmax= 1.27721E-03
+jacobi: iter=2800 diffmax= 1.23177E-03
+jacobi: iter=2900 diffmax= 1.18927E-03
+jacobi: iter=3000 diffmax= 1.14945E-03
+jacobi: iter=3100 diffmax= 1.11241E-03
+jacobi: iter=3200 diffmax= 1.07781E-03
+jacobi: iter=3300 diffmax= 1.04510E-03
+jacobi: iter=3400 diffmax= 1.01423E-03
+jacobi: iter=3500 diffmax= 9.85410E-04
+jacobi: iter=3600 diffmax= 9.58058E-04
+jacobi: iter=3700 diffmax= 9.32041E-04
+jacobi: iter=3800 diffmax= 9.07634E-04
+jacobi: iter=3900 diffmax= 8.84395E-04
+jacobi: iter=4000 diffmax= 8.62184E-04
+jacobi: iter=4100 diffmax= 8.41289E-04
+jacobi: iter=4200 diffmax= 8.21263E-04
+jacobi: iter=4300 diffmax= 8.02132E-04
+jacobi: iter=4400 diffmax= 7.84031E-04
+jacobi: iter=4500 diffmax= 7.66561E-04
+jacobi: iter=4600 diffmax= 7.49985E-04
+jacobi: iter=4700 diffmax= 7.34106E-04
+jacobi: iter=4800 diffmax= 7.18812E-04
+jacobi: iter=4900 diffmax= 7.04280E-04
+jacobi: iter=5000 diffmax= 6.90206E-04
+Exiting jacobi; last OpenMP region completed
+jacobi: total parallel update wall time (s) =  1.0687752976617776E+03
+Checksum slice: y-mid plane index j = 126
+  sum(u)      =  1.0010968651799867E+06
+  min(u)      =  1.2263936812581301E+01
+  max(u)      =  2.0000000000000000E+01
+ poisson3d successfully executed. Exiting...
+
+===== Running sweep case: threads=2 =====
+Time: Mon Jan 19 12:08:26 CET 2026
+ Starting Poisson 3D solver with the following parameters:
+   N (interior grid size)      =          250
+   itermax (max iterations)    =         5000
+   convergence tolerance       =    1.0000000000000001E-005
+   Iterative algorithm         =            1
+   OpenMP max threads          =            2
+   OpenMP thread limit         =   2147483647
+   OpenMP dynamic threads      =  F
+ Solving...
+Entering jacobi; about to start first OpenMP region
+OpenMP: jacobi threads used = 2
+jacobi: iter=100 diffmax= 3.44325E-02
+jacobi: iter=200 diffmax= 1.71869E-02
+jacobi: iter=300 diffmax= 1.14924E-02
+jacobi: iter=400 diffmax= 8.61357E-03
+jacobi: iter=500 diffmax= 6.89461E-03
+jacobi: iter=600 diffmax= 5.74775E-03
+jacobi: iter=700 diffmax= 4.92259E-03
+jacobi: iter=800 diffmax= 4.31096E-03
+jacobi: iter=900 diffmax= 3.82954E-03
+jacobi: iter=1000 diffmax= 3.44801E-03
+jacobi: iter=1100 diffmax= 3.13533E-03
+jacobi: iter=1200 diffmax= 2.87363E-03
+jacobi: iter=1300 diffmax= 2.65189E-03
+jacobi: iter=1400 diffmax= 2.46241E-03
+jacobi: iter=1500 diffmax= 2.29835E-03
+jacobi: iter=1600 diffmax= 2.15480E-03
+jacobi: iter=1700 diffmax= 2.02810E-03
+jacobi: iter=1800 diffmax= 1.91545E-03
+jacobi: iter=1900 diffmax= 1.81461E-03
+jacobi: iter=2000 diffmax= 1.72399E-03
+jacobi: iter=2100 diffmax= 1.64204E-03
+jacobi: iter=2200 diffmax= 1.56760E-03
+jacobi: iter=2300 diffmax= 1.49955E-03
+jacobi: iter=2400 diffmax= 1.43705E-03
+jacobi: iter=2500 diffmax= 1.37941E-03
+jacobi: iter=2600 diffmax= 1.32621E-03
+jacobi: iter=2700 diffmax= 1.27721E-03
+jacobi: iter=2800 diffmax= 1.23177E-03
+jacobi: iter=2900 diffmax= 1.18927E-03
+jacobi: iter=3000 diffmax= 1.14945E-03
+jacobi: iter=3100 diffmax= 1.11241E-03
+jacobi: iter=3200 diffmax= 1.07781E-03
+jacobi: iter=3300 diffmax= 1.04510E-03
+jacobi: iter=3400 diffmax= 1.01423E-03
+jacobi: iter=3500 diffmax= 9.85410E-04
+jacobi: iter=3600 diffmax= 9.58058E-04
+jacobi: iter=3700 diffmax= 9.32041E-04
+jacobi: iter=3800 diffmax= 9.07634E-04
+jacobi: iter=3900 diffmax= 8.84395E-04
+jacobi: iter=4000 diffmax= 8.62184E-04
+jacobi: iter=4100 diffmax= 8.41289E-04
+jacobi: iter=4200 diffmax= 8.21263E-04
+jacobi: iter=4300 diffmax= 8.02132E-04
+jacobi: iter=4400 diffmax= 7.84031E-04
+jacobi: iter=4500 diffmax= 7.66561E-04
+jacobi: iter=4600 diffmax= 7.49985E-04
+jacobi: iter=4700 diffmax= 7.34106E-04
+jacobi: iter=4800 diffmax= 7.18812E-04
+jacobi: iter=4900 diffmax= 7.04280E-04
+jacobi: iter=5000 diffmax= 6.90206E-04
+Exiting jacobi; last OpenMP region completed
+jacobi: total parallel update wall time (s) =  5.3479651545034721E+02
+Checksum slice: y-mid plane index j = 126
+  sum(u)      =  1.0010968651799867E+06
+  min(u)      =  1.2263936812581301E+01
+  max(u)      =  2.0000000000000000E+01
+ poisson3d successfully executed. Exiting...
+
+===== Running sweep case: threads=3 =====
+Time: Mon Jan 19 12:17:35 CET 2026
+ Starting Poisson 3D solver with the following parameters:
+   N (interior grid size)      =          250
+   itermax (max iterations)    =         5000
+   convergence tolerance       =    1.0000000000000001E-005
+   Iterative algorithm         =            1
+   OpenMP max threads          =            3
+   OpenMP thread limit         =   2147483647
+   OpenMP dynamic threads      =  F
+ Solving...
+Entering jacobi; about to start first OpenMP region
+OpenMP: jacobi threads used = 3
+jacobi: iter=100 diffmax= 3.44325E-02
+jacobi: iter=200 diffmax= 1.71869E-02
+jacobi: iter=300 diffmax= 1.14924E-02
+jacobi: iter=400 diffmax= 8.61357E-03
+jacobi: iter=500 diffmax= 6.89461E-03
+jacobi: iter=600 diffmax= 5.74775E-03
+jacobi: iter=700 diffmax= 4.92259E-03
+jacobi: iter=800 diffmax= 4.31096E-03
+jacobi: iter=900 diffmax= 3.82954E-03
+jacobi: iter=1000 diffmax= 3.44801E-03
+jacobi: iter=1100 diffmax= 3.13533E-03
+jacobi: iter=1200 diffmax= 2.87363E-03
+jacobi: iter=1300 diffmax= 2.65189E-03
+jacobi: iter=1400 diffmax= 2.46241E-03
+jacobi: iter=1500 diffmax= 2.29835E-03
+jacobi: iter=1600 diffmax= 2.15480E-03
+jacobi: iter=1700 diffmax= 2.02810E-03
+jacobi: iter=1800 diffmax= 1.91545E-03
+jacobi: iter=1900 diffmax= 1.81461E-03
+jacobi: iter=2000 diffmax= 1.72399E-03
+jacobi: iter=2100 diffmax= 1.64204E-03
+jacobi: iter=2200 diffmax= 1.56760E-03
+jacobi: iter=2300 diffmax= 1.49955E-03
+jacobi: iter=2400 diffmax= 1.43705E-03
+jacobi: iter=2500 diffmax= 1.37941E-03
+jacobi: iter=2600 diffmax= 1.32621E-03
+jacobi: iter=2700 diffmax= 1.27721E-03
+jacobi: iter=2800 diffmax= 1.23177E-03
+jacobi: iter=2900 diffmax= 1.18927E-03
+jacobi: iter=3000 diffmax= 1.14945E-03
+jacobi: iter=3100 diffmax= 1.11241E-03
+jacobi: iter=3200 diffmax= 1.07781E-03
+jacobi: iter=3300 diffmax= 1.04510E-03
+jacobi: iter=3400 diffmax= 1.01423E-03
+jacobi: iter=3500 diffmax= 9.85410E-04
+jacobi: iter=3600 diffmax= 9.58058E-04
+jacobi: iter=3700 diffmax= 9.32041E-04
+jacobi: iter=3800 diffmax= 9.07634E-04
+jacobi: iter=3900 diffmax= 8.84395E-04
+jacobi: iter=4000 diffmax= 8.62184E-04
+jacobi: iter=4100 diffmax= 8.41289E-04
+jacobi: iter=4200 diffmax= 8.21263E-04
+jacobi: iter=4300 diffmax= 8.02132E-04
+jacobi: iter=4400 diffmax= 7.84031E-04
+jacobi: iter=4500 diffmax= 7.66561E-04
+jacobi: iter=4600 diffmax= 7.49985E-04
+jacobi: iter=4700 diffmax= 7.34106E-04
+jacobi: iter=4800 diffmax= 7.18812E-04
+jacobi: iter=4900 diffmax= 7.04280E-04
+jacobi: iter=5000 diffmax= 6.90206E-04
+Exiting jacobi; last OpenMP region completed
+jacobi: total parallel update wall time (s) =  3.5726562684681267E+02
+Checksum slice: y-mid plane index j = 126
+  sum(u)      =  1.0010968651799867E+06
+  min(u)      =  1.2263936812581301E+01
+  max(u)      =  2.0000000000000000E+01
+ poisson3d successfully executed. Exiting...
+
+===== Running sweep case: threads=4 =====
+Time: Mon Jan 19 12:23:46 CET 2026
+ Starting Poisson 3D solver with the following parameters:
+   N (interior grid size)      =          250
+   itermax (max iterations)    =         5000
+   convergence tolerance       =    1.0000000000000001E-005
+   Iterative algorithm         =            1
+   OpenMP max threads          =            4
+   OpenMP thread limit         =   2147483647
+   OpenMP dynamic threads      =  F
+ Solving...
+Entering jacobi; about to start first OpenMP region
+OpenMP: jacobi threads used = 4
+jacobi: iter=100 diffmax= 3.44325E-02
+jacobi: iter=200 diffmax= 1.71869E-02
+jacobi: iter=300 diffmax= 1.14924E-02
+jacobi: iter=400 diffmax= 8.61357E-03
+jacobi: iter=500 diffmax= 6.89461E-03
+jacobi: iter=600 diffmax= 5.74775E-03
+jacobi: iter=700 diffmax= 4.92259E-03
+jacobi: iter=800 diffmax= 4.31096E-03
+jacobi: iter=900 diffmax= 3.82954E-03
+jacobi: iter=1000 diffmax= 3.44801E-03
+jacobi: iter=1100 diffmax= 3.13533E-03
+jacobi: iter=1200 diffmax= 2.87363E-03
+jacobi: iter=1300 diffmax= 2.65189E-03
+jacobi: iter=1400 diffmax= 2.46241E-03
+jacobi: iter=1500 diffmax= 2.29835E-03
+jacobi: iter=1600 diffmax= 2.15480E-03
+jacobi: iter=1700 diffmax= 2.02810E-03
+jacobi: iter=1800 diffmax= 1.91545E-03
+jacobi: iter=1900 diffmax= 1.81461E-03
+jacobi: iter=2000 diffmax= 1.72399E-03
+jacobi: iter=2100 diffmax= 1.64204E-03
+jacobi: iter=2200 diffmax= 1.56760E-03
+jacobi: iter=2300 diffmax= 1.49955E-03
+jacobi: iter=2400 diffmax= 1.43705E-03
+jacobi: iter=2500 diffmax= 1.37941E-03
+jacobi: iter=2600 diffmax= 1.32621E-03
+jacobi: iter=2700 diffmax= 1.27721E-03
+jacobi: iter=2800 diffmax= 1.23177E-03
+jacobi: iter=2900 diffmax= 1.18927E-03
+jacobi: iter=3000 diffmax= 1.14945E-03
+jacobi: iter=3100 diffmax= 1.11241E-03
+jacobi: iter=3200 diffmax= 1.07781E-03
+jacobi: iter=3300 diffmax= 1.04510E-03
+jacobi: iter=3400 diffmax= 1.01423E-03
+jacobi: iter=3500 diffmax= 9.85410E-04
+jacobi: iter=3600 diffmax= 9.58058E-04
+jacobi: iter=3700 diffmax= 9.32041E-04
+jacobi: iter=3800 diffmax= 9.07634E-04
+jacobi: iter=3900 diffmax= 8.84395E-04
+jacobi: iter=4000 diffmax= 8.62184E-04
+jacobi: iter=4100 diffmax= 8.41289E-04
+jacobi: iter=4200 diffmax= 8.21263E-04
+jacobi: iter=4300 diffmax= 8.02132E-04
+jacobi: iter=4400 diffmax= 7.84031E-04
+jacobi: iter=4500 diffmax= 7.66561E-04
+jacobi: iter=4600 diffmax= 7.49985E-04
+jacobi: iter=4700 diffmax= 7.34106E-04
+jacobi: iter=4800 diffmax= 7.18812E-04
+jacobi: iter=4900 diffmax= 7.04280E-04
+jacobi: iter=5000 diffmax= 6.90206E-04
+Exiting jacobi; last OpenMP region completed
+jacobi: total parallel update wall time (s) =  2.6817875105980784E+02
+Checksum slice: y-mid plane index j = 126
+  sum(u)      =  1.0010968651799867E+06
+  min(u)      =  1.2263936812581301E+01
+  max(u)      =  2.0000000000000000E+01
+ poisson3d successfully executed. Exiting...
+
+===== Running sweep case: threads=5 =====
+Time: Mon Jan 19 12:28:28 CET 2026
+ Starting Poisson 3D solver with the following parameters:
+   N (interior grid size)      =          250
+   itermax (max iterations)    =         5000
+   convergence tolerance       =    1.0000000000000001E-005
+   Iterative algorithm         =            1
+   OpenMP max threads          =            5
+   OpenMP thread limit         =   2147483647
+   OpenMP dynamic threads      =  F
+ Solving...
+Entering jacobi; about to start first OpenMP region
+OpenMP: jacobi threads used = 5
+jacobi: iter=100 diffmax= 3.44325E-02
+jacobi: iter=200 diffmax= 1.71869E-02
+jacobi: iter=300 diffmax= 1.14924E-02
+jacobi: iter=400 diffmax= 8.61357E-03
+jacobi: iter=500 diffmax= 6.89461E-03
+jacobi: iter=600 diffmax= 5.74775E-03
+jacobi: iter=700 diffmax= 4.92259E-03
+jacobi: iter=800 diffmax= 4.31096E-03
+jacobi: iter=900 diffmax= 3.82954E-03
+jacobi: iter=1000 diffmax= 3.44801E-03
+jacobi: iter=1100 diffmax= 3.13533E-03
+jacobi: iter=1200 diffmax= 2.87363E-03
+jacobi: iter=1300 diffmax= 2.65189E-03
+jacobi: iter=1400 diffmax= 2.46241E-03
+jacobi: iter=1500 diffmax= 2.29835E-03
+jacobi: iter=1600 diffmax= 2.15480E-03
+jacobi: iter=1700 diffmax= 2.02810E-03
+jacobi: iter=1800 diffmax= 1.91545E-03
+jacobi: iter=1900 diffmax= 1.81461E-03
+jacobi: iter=2000 diffmax= 1.72399E-03
+jacobi: iter=2100 diffmax= 1.64204E-03
+jacobi: iter=2200 diffmax= 1.56760E-03
+jacobi: iter=2300 diffmax= 1.49955E-03
+jacobi: iter=2400 diffmax= 1.43705E-03
+jacobi: iter=2500 diffmax= 1.37941E-03
+jacobi: iter=2600 diffmax= 1.32621E-03
+jacobi: iter=2700 diffmax= 1.27721E-03
+jacobi: iter=2800 diffmax= 1.23177E-03
+jacobi: iter=2900 diffmax= 1.18927E-03
+jacobi: iter=3000 diffmax= 1.14945E-03
+jacobi: iter=3100 diffmax= 1.11241E-03
+jacobi: iter=3200 diffmax= 1.07781E-03
+jacobi: iter=3300 diffmax= 1.04510E-03
+jacobi: iter=3400 diffmax= 1.01423E-03
+jacobi: iter=3500 diffmax= 9.85410E-04
+jacobi: iter=3600 diffmax= 9.58058E-04
+jacobi: iter=3700 diffmax= 9.32041E-04
+jacobi: iter=3800 diffmax= 9.07634E-04
+jacobi: iter=3900 diffmax= 8.84395E-04
+jacobi: iter=4000 diffmax= 8.62184E-04
+jacobi: iter=4100 diffmax= 8.41289E-04
+jacobi: iter=4200 diffmax= 8.21263E-04
+jacobi: iter=4300 diffmax= 8.02132E-04
+jacobi: iter=4400 diffmax= 7.84031E-04
+jacobi: iter=4500 diffmax= 7.66561E-04
+jacobi: iter=4600 diffmax= 7.49985E-04
+jacobi: iter=4700 diffmax= 7.34106E-04
+jacobi: iter=4800 diffmax= 7.18812E-04
+jacobi: iter=4900 diffmax= 7.04280E-04
+jacobi: iter=5000 diffmax= 6.90206E-04
+Exiting jacobi; last OpenMP region completed
+jacobi: total parallel update wall time (s) =  2.1489644575724378E+02
+Checksum slice: y-mid plane index j = 126
+  sum(u)      =  1.0010968651799867E+06
+  min(u)      =  1.2263936812581301E+01
+  max(u)      =  2.0000000000000000E+01
+ poisson3d successfully executed. Exiting...
+
+===== Running sweep case: threads=6 =====
+Time: Mon Jan 19 12:32:17 CET 2026
+ Starting Poisson 3D solver with the following parameters:
+   N (interior grid size)      =          250
+   itermax (max iterations)    =         5000
+   convergence tolerance       =    1.0000000000000001E-005
+   Iterative algorithm         =            1
+   OpenMP max threads          =            6
+   OpenMP thread limit         =   2147483647
+   OpenMP dynamic threads      =  F
+ Solving...
+Entering jacobi; about to start first OpenMP region
+OpenMP: jacobi threads used = 6
+jacobi: iter=100 diffmax= 3.44325E-02
+jacobi: iter=200 diffmax= 1.71869E-02
+jacobi: iter=300 diffmax= 1.14924E-02
+jacobi: iter=400 diffmax= 8.61357E-03
+jacobi: iter=500 diffmax= 6.89461E-03
+jacobi: iter=600 diffmax= 5.74775E-03
+jacobi: iter=700 diffmax= 4.92259E-03
+jacobi: iter=800 diffmax= 4.31096E-03
+jacobi: iter=900 diffmax= 3.82954E-03
+jacobi: iter=1000 diffmax= 3.44801E-03
+jacobi: iter=1100 diffmax= 3.13533E-03
+jacobi: iter=1200 diffmax= 2.87363E-03
+jacobi: iter=1300 diffmax= 2.65189E-03
+jacobi: iter=1400 diffmax= 2.46241E-03
+jacobi: iter=1500 diffmax= 2.29835E-03
+jacobi: iter=1600 diffmax= 2.15480E-03
+jacobi: iter=1700 diffmax= 2.02810E-03
+jacobi: iter=1800 diffmax= 1.91545E-03
+jacobi: iter=1900 diffmax= 1.81461E-03
+jacobi: iter=2000 diffmax= 1.72399E-03
+jacobi: iter=2100 diffmax= 1.64204E-03
+jacobi: iter=2200 diffmax= 1.56760E-03
+jacobi: iter=2300 diffmax= 1.49955E-03
+jacobi: iter=2400 diffmax= 1.43705E-03
+jacobi: iter=2500 diffmax= 1.37941E-03
+jacobi: iter=2600 diffmax= 1.32621E-03
+jacobi: iter=2700 diffmax= 1.27721E-03
+jacobi: iter=2800 diffmax= 1.23177E-03
+jacobi: iter=2900 diffmax= 1.18927E-03
+jacobi: iter=3000 diffmax= 1.14945E-03
+jacobi: iter=3100 diffmax= 1.11241E-03
+jacobi: iter=3200 diffmax= 1.07781E-03
+jacobi: iter=3300 diffmax= 1.04510E-03
+jacobi: iter=3400 diffmax= 1.01423E-03
+jacobi: iter=3500 diffmax= 9.85410E-04
+jacobi: iter=3600 diffmax= 9.58058E-04
+jacobi: iter=3700 diffmax= 9.32041E-04
+jacobi: iter=3800 diffmax= 9.07634E-04
+jacobi: iter=3900 diffmax= 8.84395E-04
+jacobi: iter=4000 diffmax= 8.62184E-04
+jacobi: iter=4100 diffmax= 8.41289E-04
+jacobi: iter=4200 diffmax= 8.21263E-04
+jacobi: iter=4300 diffmax= 8.02132E-04
+jacobi: iter=4400 diffmax= 7.84031E-04
+jacobi: iter=4500 diffmax= 7.66561E-04
+jacobi: iter=4600 diffmax= 7.49985E-04
+jacobi: iter=4700 diffmax= 7.34106E-04
+jacobi: iter=4800 diffmax= 7.18812E-04
+jacobi: iter=4900 diffmax= 7.04280E-04
+jacobi: iter=5000 diffmax= 6.90206E-04
+Exiting jacobi; last OpenMP region completed
+jacobi: total parallel update wall time (s) =  1.7929938870714977E+02
+Checksum slice: y-mid plane index j = 126
+  sum(u)      =  1.0010968651799867E+06
+  min(u)      =  1.2263936812581301E+01
+  max(u)      =  2.0000000000000000E+01
+ poisson3d successfully executed. Exiting...
+
+===== Running sweep case: threads=7 =====
+Time: Mon Jan 19 12:35:30 CET 2026
+ Starting Poisson 3D solver with the following parameters:
+   N (interior grid size)      =          250
+   itermax (max iterations)    =         5000
+   convergence tolerance       =    1.0000000000000001E-005
+   Iterative algorithm         =            1
+   OpenMP max threads          =            7
+   OpenMP thread limit         =   2147483647
+   OpenMP dynamic threads      =  F
+ Solving...
+Entering jacobi; about to start first OpenMP region
+OpenMP: jacobi threads used = 7
+jacobi: iter=100 diffmax= 3.44325E-02
+jacobi: iter=200 diffmax= 1.71869E-02
+jacobi: iter=300 diffmax= 1.14924E-02
+jacobi: iter=400 diffmax= 8.61357E-03
+jacobi: iter=500 diffmax= 6.89461E-03
+jacobi: iter=600 diffmax= 5.74775E-03
+jacobi: iter=700 diffmax= 4.92259E-03
+jacobi: iter=800 diffmax= 4.31096E-03
+jacobi: iter=900 diffmax= 3.82954E-03
+jacobi: iter=1000 diffmax= 3.44801E-03
+jacobi: iter=1100 diffmax= 3.13533E-03
+jacobi: iter=1200 diffmax= 2.87363E-03
+jacobi: iter=1300 diffmax= 2.65189E-03
+jacobi: iter=1400 diffmax= 2.46241E-03
+jacobi: iter=1500 diffmax= 2.29835E-03
+jacobi: iter=1600 diffmax= 2.15480E-03
+jacobi: iter=1700 diffmax= 2.02810E-03
+jacobi: iter=1800 diffmax= 1.91545E-03
+jacobi: iter=1900 diffmax= 1.81461E-03
+jacobi: iter=2000 diffmax= 1.72399E-03
+jacobi: iter=2100 diffmax= 1.64204E-03
+jacobi: iter=2200 diffmax= 1.56760E-03
+jacobi: iter=2300 diffmax= 1.49955E-03
+jacobi: iter=2400 diffmax= 1.43705E-03
+jacobi: iter=2500 diffmax= 1.37941E-03
+jacobi: iter=2600 diffmax= 1.32621E-03
+jacobi: iter=2700 diffmax= 1.27721E-03
+jacobi: iter=2800 diffmax= 1.23177E-03
+jacobi: iter=2900 diffmax= 1.18927E-03
+jacobi: iter=3000 diffmax= 1.14945E-03
+jacobi: iter=3100 diffmax= 1.11241E-03
+jacobi: iter=3200 diffmax= 1.07781E-03
+jacobi: iter=3300 diffmax= 1.04510E-03
+jacobi: iter=3400 diffmax= 1.01423E-03
+jacobi: iter=3500 diffmax= 9.85410E-04
+jacobi: iter=3600 diffmax= 9.58058E-04
+jacobi: iter=3700 diffmax= 9.32041E-04
+jacobi: iter=3800 diffmax= 9.07634E-04
+jacobi: iter=3900 diffmax= 8.84395E-04
+jacobi: iter=4000 diffmax= 8.62184E-04
+jacobi: iter=4100 diffmax= 8.41289E-04
+jacobi: iter=4200 diffmax= 8.21263E-04
+jacobi: iter=4300 diffmax= 8.02132E-04
+jacobi: iter=4400 diffmax= 7.84031E-04
+jacobi: iter=4500 diffmax= 7.66561E-04
+jacobi: iter=4600 diffmax= 7.49985E-04
+jacobi: iter=4700 diffmax= 7.34106E-04
+jacobi: iter=4800 diffmax= 7.18812E-04
+jacobi: iter=4900 diffmax= 7.04280E-04
+jacobi: iter=5000 diffmax= 6.90206E-04
+Exiting jacobi; last OpenMP region completed
+jacobi: total parallel update wall time (s) =  1.5773885818151757E+02
+Checksum slice: y-mid plane index j = 126
+  sum(u)      =  1.0010968651799867E+06
+  min(u)      =  1.2263936812581301E+01
+  max(u)      =  2.0000000000000000E+01
+ poisson3d successfully executed. Exiting...
+
+===== Running sweep case: threads=8 =====
+Time: Mon Jan 19 12:38:22 CET 2026
+ Starting Poisson 3D solver with the following parameters:
+   N (interior grid size)      =          250
+   itermax (max iterations)    =         5000
+   convergence tolerance       =    1.0000000000000001E-005
+   Iterative algorithm         =            1
+   OpenMP max threads          =            8
+   OpenMP thread limit         =   2147483647
+   OpenMP dynamic threads      =  F
+ Solving...
+Entering jacobi; about to start first OpenMP region
+OpenMP: jacobi threads used = 8
+jacobi: iter=100 diffmax= 3.44325E-02
+jacobi: iter=200 diffmax= 1.71869E-02
+jacobi: iter=300 diffmax= 1.14924E-02
+jacobi: iter=400 diffmax= 8.61357E-03
+jacobi: iter=500 diffmax= 6.89461E-03
+jacobi: iter=600 diffmax= 5.74775E-03
+jacobi: iter=700 diffmax= 4.92259E-03
+jacobi: iter=800 diffmax= 4.31096E-03
+jacobi: iter=900 diffmax= 3.82954E-03
+jacobi: iter=1000 diffmax= 3.44801E-03
+jacobi: iter=1100 diffmax= 3.13533E-03
+jacobi: iter=1200 diffmax= 2.87363E-03
+jacobi: iter=1300 diffmax= 2.65189E-03
+jacobi: iter=1400 diffmax= 2.46241E-03
+jacobi: iter=1500 diffmax= 2.29835E-03
+jacobi: iter=1600 diffmax= 2.15480E-03
+jacobi: iter=1700 diffmax= 2.02810E-03
+jacobi: iter=1800 diffmax= 1.91545E-03
+jacobi: iter=1900 diffmax= 1.81461E-03
+jacobi: iter=2000 diffmax= 1.72399E-03
+jacobi: iter=2100 diffmax= 1.64204E-03
+jacobi: iter=2200 diffmax= 1.56760E-03
+jacobi: iter=2300 diffmax= 1.49955E-03
+jacobi: iter=2400 diffmax= 1.43705E-03
+jacobi: iter=2500 diffmax= 1.37941E-03
+jacobi: iter=2600 diffmax= 1.32621E-03
+jacobi: iter=2700 diffmax= 1.27721E-03
+jacobi: iter=2800 diffmax= 1.23177E-03
+jacobi: iter=2900 diffmax= 1.18927E-03
+jacobi: iter=3000 diffmax= 1.14945E-03
+jacobi: iter=3100 diffmax= 1.11241E-03
+jacobi: iter=3200 diffmax= 1.07781E-03
+jacobi: iter=3300 diffmax= 1.04510E-03
+jacobi: iter=3400 diffmax= 1.01423E-03
+jacobi: iter=3500 diffmax= 9.85410E-04
+jacobi: iter=3600 diffmax= 9.58058E-04
+jacobi: iter=3700 diffmax= 9.32041E-04
+jacobi: iter=3800 diffmax= 9.07634E-04
+jacobi: iter=3900 diffmax= 8.84395E-04
+jacobi: iter=4000 diffmax= 8.62184E-04
+jacobi: iter=4100 diffmax= 8.41289E-04
+jacobi: iter=4200 diffmax= 8.21263E-04
+jacobi: iter=4300 diffmax= 8.02132E-04
+jacobi: iter=4400 diffmax= 7.84031E-04
+jacobi: iter=4500 diffmax= 7.66561E-04
+jacobi: iter=4600 diffmax= 7.49985E-04
+jacobi: iter=4700 diffmax= 7.34106E-04
+jacobi: iter=4800 diffmax= 7.18812E-04
+jacobi: iter=4900 diffmax= 7.04280E-04
+jacobi: iter=5000 diffmax= 6.90206E-04
+Exiting jacobi; last OpenMP region completed
+jacobi: total parallel update wall time (s) =  1.3491363336611539E+02
+Checksum slice: y-mid plane index j = 126
+  sum(u)      =  1.0010968651799867E+06
+  min(u)      =  1.2263936812581301E+01
+  max(u)      =  2.0000000000000000E+01
+ poisson3d successfully executed. Exiting...
+
+===== Running sweep case: threads=9 =====
+Time: Mon Jan 19 12:40:51 CET 2026
+ Starting Poisson 3D solver with the following parameters:
+   N (interior grid size)      =          250
+   itermax (max iterations)    =         5000
+   convergence tolerance       =    1.0000000000000001E-005
+   Iterative algorithm         =            1
+   OpenMP max threads          =            9
+   OpenMP thread limit         =   2147483647
+   OpenMP dynamic threads      =  F
+ Solving...
+Entering jacobi; about to start first OpenMP region
+OpenMP: jacobi threads used = 9
+jacobi: iter=100 diffmax= 3.44325E-02
+jacobi: iter=200 diffmax= 1.71869E-02
+jacobi: iter=300 diffmax= 1.14924E-02
+jacobi: iter=400 diffmax= 8.61357E-03
+jacobi: iter=500 diffmax= 6.89461E-03
+jacobi: iter=600 diffmax= 5.74775E-03
+jacobi: iter=700 diffmax= 4.92259E-03
+jacobi: iter=800 diffmax= 4.31096E-03
+jacobi: iter=900 diffmax= 3.82954E-03
+jacobi: iter=1000 diffmax= 3.44801E-03
+jacobi: iter=1100 diffmax= 3.13533E-03
+jacobi: iter=1200 diffmax= 2.87363E-03
+jacobi: iter=1300 diffmax= 2.65189E-03
+jacobi: iter=1400 diffmax= 2.46241E-03
+jacobi: iter=1500 diffmax= 2.29835E-03
+jacobi: iter=1600 diffmax= 2.15480E-03
+jacobi: iter=1700 diffmax= 2.02810E-03
+jacobi: iter=1800 diffmax= 1.91545E-03
+jacobi: iter=1900 diffmax= 1.81461E-03
+jacobi: iter=2000 diffmax= 1.72399E-03
+jacobi: iter=2100 diffmax= 1.64204E-03
+jacobi: iter=2200 diffmax= 1.56760E-03
+jacobi: iter=2300 diffmax= 1.49955E-03
+jacobi: iter=2400 diffmax= 1.43705E-03
+jacobi: iter=2500 diffmax= 1.37941E-03
+jacobi: iter=2600 diffmax= 1.32621E-03
+jacobi: iter=2700 diffmax= 1.27721E-03
+jacobi: iter=2800 diffmax= 1.23177E-03
+jacobi: iter=2900 diffmax= 1.18927E-03
+jacobi: iter=3000 diffmax= 1.14945E-03
+jacobi: iter=3100 diffmax= 1.11241E-03
+jacobi: iter=3200 diffmax= 1.07781E-03
+jacobi: iter=3300 diffmax= 1.04510E-03
+jacobi: iter=3400 diffmax= 1.01423E-03
+jacobi: iter=3500 diffmax= 9.85410E-04
+jacobi: iter=3600 diffmax= 9.58058E-04
+jacobi: iter=3700 diffmax= 9.32041E-04
+jacobi: iter=3800 diffmax= 9.07634E-04
+jacobi: iter=3900 diffmax= 8.84395E-04
+jacobi: iter=4000 diffmax= 8.62184E-04
+jacobi: iter=4100 diffmax= 8.41289E-04
+jacobi: iter=4200 diffmax= 8.21263E-04
+jacobi: iter=4300 diffmax= 8.02132E-04
+jacobi: iter=4400 diffmax= 7.84031E-04
+jacobi: iter=4500 diffmax= 7.66561E-04
+jacobi: iter=4600 diffmax= 7.49985E-04
+jacobi: iter=4700 diffmax= 7.34106E-04
+jacobi: iter=4800 diffmax= 7.18812E-04
+jacobi: iter=4900 diffmax= 7.04280E-04
+jacobi: iter=5000 diffmax= 6.90206E-04
+Exiting jacobi; last OpenMP region completed
+jacobi: total parallel update wall time (s) =  1.2012348978500813E+02
+Checksum slice: y-mid plane index j = 126
+  sum(u)      =  1.0010968651799867E+06
+  min(u)      =  1.2263936812581301E+01
+  max(u)      =  2.0000000000000000E+01
+ poisson3d successfully executed. Exiting...
+
+===== Running sweep case: threads=10 =====
+Time: Mon Jan 19 12:43:05 CET 2026
+ Starting Poisson 3D solver with the following parameters:
+   N (interior grid size)      =          250
+   itermax (max iterations)    =         5000
+   convergence tolerance       =    1.0000000000000001E-005
+   Iterative algorithm         =            1
+   OpenMP max threads          =           10
+   OpenMP thread limit         =   2147483647
+   OpenMP dynamic threads      =  F
+ Solving...
+Entering jacobi; about to start first OpenMP region
+OpenMP: jacobi threads used = 10
+jacobi: iter=100 diffmax= 3.44325E-02
+jacobi: iter=200 diffmax= 1.71869E-02
+jacobi: iter=300 diffmax= 1.14924E-02
+jacobi: iter=400 diffmax= 8.61357E-03
+jacobi: iter=500 diffmax= 6.89461E-03
+jacobi: iter=600 diffmax= 5.74775E-03
+jacobi: iter=700 diffmax= 4.92259E-03
+jacobi: iter=800 diffmax= 4.31096E-03
+jacobi: iter=900 diffmax= 3.82954E-03
+jacobi: iter=1000 diffmax= 3.44801E-03
+jacobi: iter=1100 diffmax= 3.13533E-03
+jacobi: iter=1200 diffmax= 2.87363E-03
+jacobi: iter=1300 diffmax= 2.65189E-03
+jacobi: iter=1400 diffmax= 2.46241E-03
+jacobi: iter=1500 diffmax= 2.29835E-03
+jacobi: iter=1600 diffmax= 2.15480E-03
+jacobi: iter=1700 diffmax= 2.02810E-03
+jacobi: iter=1800 diffmax= 1.91545E-03
+jacobi: iter=1900 diffmax= 1.81461E-03
+jacobi: iter=2000 diffmax= 1.72399E-03
+jacobi: iter=2100 diffmax= 1.64204E-03
+jacobi: iter=2200 diffmax= 1.56760E-03
+jacobi: iter=2300 diffmax= 1.49955E-03
+jacobi: iter=2400 diffmax= 1.43705E-03
+jacobi: iter=2500 diffmax= 1.37941E-03
+jacobi: iter=2600 diffmax= 1.32621E-03
+jacobi: iter=2700 diffmax= 1.27721E-03
+jacobi: iter=2800 diffmax= 1.23177E-03
+jacobi: iter=2900 diffmax= 1.18927E-03
+jacobi: iter=3000 diffmax= 1.14945E-03
+jacobi: iter=3100 diffmax= 1.11241E-03
+jacobi: iter=3200 diffmax= 1.07781E-03
+jacobi: iter=3300 diffmax= 1.04510E-03
+jacobi: iter=3400 diffmax= 1.01423E-03
+jacobi: iter=3500 diffmax= 9.85410E-04
+jacobi: iter=3600 diffmax= 9.58058E-04
+jacobi: iter=3700 diffmax= 9.32041E-04
+jacobi: iter=3800 diffmax= 9.07634E-04
+jacobi: iter=3900 diffmax= 8.84395E-04
+jacobi: iter=4000 diffmax= 8.62184E-04
+jacobi: iter=4100 diffmax= 8.41289E-04
+jacobi: iter=4200 diffmax= 8.21263E-04
+jacobi: iter=4300 diffmax= 8.02132E-04
+jacobi: iter=4400 diffmax= 7.84031E-04
+jacobi: iter=4500 diffmax= 7.66561E-04
+jacobi: iter=4600 diffmax= 7.49985E-04
+jacobi: iter=4700 diffmax= 7.34106E-04
+jacobi: iter=4800 diffmax= 7.18812E-04
+jacobi: iter=4900 diffmax= 7.04280E-04
+jacobi: iter=5000 diffmax= 6.90206E-04
+Exiting jacobi; last OpenMP region completed
+jacobi: total parallel update wall time (s) =  1.0832490737503394E+02
+Checksum slice: y-mid plane index j = 126
+  sum(u)      =  1.0010968651799867E+06
+  min(u)      =  1.2263936812581301E+01
+  max(u)      =  2.0000000000000000E+01
+ poisson3d successfully executed. Exiting...
+
+===== Running sweep case: threads=11 =====
+Time: Mon Jan 19 12:45:07 CET 2026
+ Starting Poisson 3D solver with the following parameters:
+   N (interior grid size)      =          250
+   itermax (max iterations)    =         5000
+   convergence tolerance       =    1.0000000000000001E-005
+   Iterative algorithm         =            1
+   OpenMP max threads          =           11
+   OpenMP thread limit         =   2147483647
+   OpenMP dynamic threads      =  F
+ Solving...
+Entering jacobi; about to start first OpenMP region
+OpenMP: jacobi threads used = 11
+jacobi: iter=100 diffmax= 3.44325E-02
+jacobi: iter=200 diffmax= 1.71869E-02
+jacobi: iter=300 diffmax= 1.14924E-02
+jacobi: iter=400 diffmax= 8.61357E-03
+jacobi: iter=500 diffmax= 6.89461E-03
+jacobi: iter=600 diffmax= 5.74775E-03
+jacobi: iter=700 diffmax= 4.92259E-03
+jacobi: iter=800 diffmax= 4.31096E-03
+jacobi: iter=900 diffmax= 3.82954E-03
+jacobi: iter=1000 diffmax= 3.44801E-03
+jacobi: iter=1100 diffmax= 3.13533E-03
+jacobi: iter=1200 diffmax= 2.87363E-03
+jacobi: iter=1300 diffmax= 2.65189E-03
+jacobi: iter=1400 diffmax= 2.46241E-03
+jacobi: iter=1500 diffmax= 2.29835E-03
+jacobi: iter=1600 diffmax= 2.15480E-03
+jacobi: iter=1700 diffmax= 2.02810E-03
+jacobi: iter=1800 diffmax= 1.91545E-03
+jacobi: iter=1900 diffmax= 1.81461E-03
+jacobi: iter=2000 diffmax= 1.72399E-03
+jacobi: iter=2100 diffmax= 1.64204E-03
+jacobi: iter=2200 diffmax= 1.56760E-03
+jacobi: iter=2300 diffmax= 1.49955E-03
+jacobi: iter=2400 diffmax= 1.43705E-03
+jacobi: iter=2500 diffmax= 1.37941E-03
+jacobi: iter=2600 diffmax= 1.32621E-03
+jacobi: iter=2700 diffmax= 1.27721E-03
+jacobi: iter=2800 diffmax= 1.23177E-03
+jacobi: iter=2900 diffmax= 1.18927E-03
+jacobi: iter=3000 diffmax= 1.14945E-03
+jacobi: iter=3100 diffmax= 1.11241E-03
+jacobi: iter=3200 diffmax= 1.07781E-03
+jacobi: iter=3300 diffmax= 1.04510E-03
+jacobi: iter=3400 diffmax= 1.01423E-03
+jacobi: iter=3500 diffmax= 9.85410E-04
+jacobi: iter=3600 diffmax= 9.58058E-04
+jacobi: iter=3700 diffmax= 9.32041E-04
+jacobi: iter=3800 diffmax= 9.07634E-04
+jacobi: iter=3900 diffmax= 8.84395E-04
+jacobi: iter=4000 diffmax= 8.62184E-04
+jacobi: iter=4100 diffmax= 8.41289E-04
+jacobi: iter=4200 diffmax= 8.21263E-04
+jacobi: iter=4300 diffmax= 8.02132E-04
+jacobi: iter=4400 diffmax= 7.84031E-04
+jacobi: iter=4500 diffmax= 7.66561E-04
+jacobi: iter=4600 diffmax= 7.49985E-04
+jacobi: iter=4700 diffmax= 7.34106E-04
+jacobi: iter=4800 diffmax= 7.18812E-04
+jacobi: iter=4900 diffmax= 7.04280E-04
+jacobi: iter=5000 diffmax= 6.90206E-04
+Exiting jacobi; last OpenMP region completed
+jacobi: total parallel update wall time (s) =  9.8709963611792773E+01
+Checksum slice: y-mid plane index j = 126
+  sum(u)      =  1.0010968651799867E+06
+  min(u)      =  1.2263936812581301E+01
+  max(u)      =  2.0000000000000000E+01
+ poisson3d successfully executed. Exiting...
+
+===== Running sweep case: threads=12 =====
+Time: Mon Jan 19 12:47:00 CET 2026
+ Starting Poisson 3D solver with the following parameters:
+   N (interior grid size)      =          250
+   itermax (max iterations)    =         5000
+   convergence tolerance       =    1.0000000000000001E-005
+   Iterative algorithm         =            1
+   OpenMP max threads          =           12
+   OpenMP thread limit         =   2147483647
+   OpenMP dynamic threads      =  F
+ Solving...
+Entering jacobi; about to start first OpenMP region
+OpenMP: jacobi threads used = 12
+jacobi: iter=100 diffmax= 3.44325E-02
+jacobi: iter=200 diffmax= 1.71869E-02
+jacobi: iter=300 diffmax= 1.14924E-02
+jacobi: iter=400 diffmax= 8.61357E-03
+jacobi: iter=500 diffmax= 6.89461E-03
+jacobi: iter=600 diffmax= 5.74775E-03
+jacobi: iter=700 diffmax= 4.92259E-03
+jacobi: iter=800 diffmax= 4.31096E-03
+jacobi: iter=900 diffmax= 3.82954E-03
+jacobi: iter=1000 diffmax= 3.44801E-03
+jacobi: iter=1100 diffmax= 3.13533E-03
+jacobi: iter=1200 diffmax= 2.87363E-03
+jacobi: iter=1300 diffmax= 2.65189E-03
+jacobi: iter=1400 diffmax= 2.46241E-03
+jacobi: iter=1500 diffmax= 2.29835E-03
+jacobi: iter=1600 diffmax= 2.15480E-03
+jacobi: iter=1700 diffmax= 2.02810E-03
+jacobi: iter=1800 diffmax= 1.91545E-03
+jacobi: iter=1900 diffmax= 1.81461E-03
+jacobi: iter=2000 diffmax= 1.72399E-03
+jacobi: iter=2100 diffmax= 1.64204E-03
+jacobi: iter=2200 diffmax= 1.56760E-03
+jacobi: iter=2300 diffmax= 1.49955E-03
+jacobi: iter=2400 diffmax= 1.43705E-03
+jacobi: iter=2500 diffmax= 1.37941E-03
+jacobi: iter=2600 diffmax= 1.32621E-03
+jacobi: iter=2700 diffmax= 1.27721E-03
+jacobi: iter=2800 diffmax= 1.23177E-03
+jacobi: iter=2900 diffmax= 1.18927E-03
+jacobi: iter=3000 diffmax= 1.14945E-03
+jacobi: iter=3100 diffmax= 1.11241E-03
+jacobi: iter=3200 diffmax= 1.07781E-03
+jacobi: iter=3300 diffmax= 1.04510E-03
+jacobi: iter=3400 diffmax= 1.01423E-03
+jacobi: iter=3500 diffmax= 9.85410E-04
+jacobi: iter=3600 diffmax= 9.58058E-04
+jacobi: iter=3700 diffmax= 9.32041E-04
+jacobi: iter=3800 diffmax= 9.07634E-04
+jacobi: iter=3900 diffmax= 8.84395E-04
+jacobi: iter=4000 diffmax= 8.62184E-04
+jacobi: iter=4100 diffmax= 8.41289E-04
+jacobi: iter=4200 diffmax= 8.21263E-04
+jacobi: iter=4300 diffmax= 8.02132E-04
+jacobi: iter=4400 diffmax= 7.84031E-04
+jacobi: iter=4500 diffmax= 7.66561E-04
+jacobi: iter=4600 diffmax= 7.49985E-04
+jacobi: iter=4700 diffmax= 7.34106E-04
+jacobi: iter=4800 diffmax= 7.18812E-04
+jacobi: iter=4900 diffmax= 7.04280E-04
+jacobi: iter=5000 diffmax= 6.90206E-04
+Exiting jacobi; last OpenMP region completed
+jacobi: total parallel update wall time (s) =  9.0836975496727973E+01
+Checksum slice: y-mid plane index j = 126
+  sum(u)      =  1.0010968651799867E+06
+  min(u)      =  1.2263936812581301E+01
+  max(u)      =  2.0000000000000000E+01
+ poisson3d successfully executed. Exiting...
+
+===== Running sweep case: threads=13 =====
+Time: Mon Jan 19 12:48:45 CET 2026
+ Starting Poisson 3D solver with the following parameters:
+   N (interior grid size)      =          250
+   itermax (max iterations)    =         5000
+   convergence tolerance       =    1.0000000000000001E-005
+   Iterative algorithm         =            1
+   OpenMP max threads          =           13
+   OpenMP thread limit         =   2147483647
+   OpenMP dynamic threads      =  F
+ Solving...
+Entering jacobi; about to start first OpenMP region
+OpenMP: jacobi threads used = 13
+jacobi: iter=100 diffmax= 3.44325E-02
+jacobi: iter=200 diffmax= 1.71869E-02
+jacobi: iter=300 diffmax= 1.14924E-02
+jacobi: iter=400 diffmax= 8.61357E-03
+jacobi: iter=500 diffmax= 6.89461E-03
+jacobi: iter=600 diffmax= 5.74775E-03
+jacobi: iter=700 diffmax= 4.92259E-03
+jacobi: iter=800 diffmax= 4.31096E-03
+jacobi: iter=900 diffmax= 3.82954E-03
+jacobi: iter=1000 diffmax= 3.44801E-03
+jacobi: iter=1100 diffmax= 3.13533E-03
+jacobi: iter=1200 diffmax= 2.87363E-03
+jacobi: iter=1300 diffmax= 2.65189E-03
+jacobi: iter=1400 diffmax= 2.46241E-03
+jacobi: iter=1500 diffmax= 2.29835E-03
+jacobi: iter=1600 diffmax= 2.15480E-03
+jacobi: iter=1700 diffmax= 2.02810E-03
+jacobi: iter=1800 diffmax= 1.91545E-03
+jacobi: iter=1900 diffmax= 1.81461E-03
+jacobi: iter=2000 diffmax= 1.72399E-03
+jacobi: iter=2100 diffmax= 1.64204E-03
+jacobi: iter=2200 diffmax= 1.56760E-03
+jacobi: iter=2300 diffmax= 1.49955E-03
+jacobi: iter=2400 diffmax= 1.43705E-03
+jacobi: iter=2500 diffmax= 1.37941E-03
+jacobi: iter=2600 diffmax= 1.32621E-03
+jacobi: iter=2700 diffmax= 1.27721E-03
+jacobi: iter=2800 diffmax= 1.23177E-03
+jacobi: iter=2900 diffmax= 1.18927E-03
+jacobi: iter=3000 diffmax= 1.14945E-03
+jacobi: iter=3100 diffmax= 1.11241E-03
+jacobi: iter=3200 diffmax= 1.07781E-03
+jacobi: iter=3300 diffmax= 1.04510E-03
+jacobi: iter=3400 diffmax= 1.01423E-03
+jacobi: iter=3500 diffmax= 9.85410E-04
+jacobi: iter=3600 diffmax= 9.58058E-04
+jacobi: iter=3700 diffmax= 9.32041E-04
+jacobi: iter=3800 diffmax= 9.07634E-04
+jacobi: iter=3900 diffmax= 8.84395E-04
+jacobi: iter=4000 diffmax= 8.62184E-04
+jacobi: iter=4100 diffmax= 8.41289E-04
+jacobi: iter=4200 diffmax= 8.21263E-04
+jacobi: iter=4300 diffmax= 8.02132E-04
+jacobi: iter=4400 diffmax= 7.84031E-04
+jacobi: iter=4500 diffmax= 7.66561E-04
+jacobi: iter=4600 diffmax= 7.49985E-04
+jacobi: iter=4700 diffmax= 7.34106E-04
+jacobi: iter=4800 diffmax= 7.18812E-04
+jacobi: iter=4900 diffmax= 7.04280E-04
+jacobi: iter=5000 diffmax= 6.90206E-04
+Exiting jacobi; last OpenMP region completed
+jacobi: total parallel update wall time (s) =  8.4056067770346999E+01
+Checksum slice: y-mid plane index j = 126
+  sum(u)      =  1.0010968651799867E+06
+  min(u)      =  1.2263936812581301E+01
+  max(u)      =  2.0000000000000000E+01
+ poisson3d successfully executed. Exiting...
+
+===== Running sweep case: threads=14 =====
+Time: Mon Jan 19 12:50:24 CET 2026
+ Starting Poisson 3D solver with the following parameters:
+   N (interior grid size)      =          250
+   itermax (max iterations)    =         5000
+   convergence tolerance       =    1.0000000000000001E-005
+   Iterative algorithm         =            1
+   OpenMP max threads          =           14
+   OpenMP thread limit         =   2147483647
+   OpenMP dynamic threads      =  F
+ Solving...
+Entering jacobi; about to start first OpenMP region
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 27648877: <bmp_hpc_sweep> in cluster <dcc> Exited
+
+Job <bmp_hpc_sweep> was submitted from host <n-62-27-22> by user <bmapa> in cluster <dcc> at Mon Jan 19 11:46:29 2026
+Job was executed on host(s) <24*n-62-21-76>, in queue <hpcintro>, as user <bmapa> in cluster <dcc> at Mon Jan 19 11:50:23 2026
+</zhome/b5/a/202220> was used as the home directory.
+</zhome/b5/a/202220/41391/Assignment1/jac_par_simple> was used as the working directory.
+Started at Mon Jan 19 11:50:23 2026
+Terminated at Mon Jan 19 12:51:32 2026
+Results reported at Mon Jan 19 12:51:32 2026
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/usr/bin/env bash
+
+set -euo pipefail
+### General options 
+
+# -- specify queue -- 
+#BSUB -q hpcintro
+
+# -- Job name (single job that runs a sequential sweep) --
+#BSUB -J bmp_hpc_sweep
+
+# -- Reserve a full node (24 cores on this machine) --
+#BSUB -n 24
+
+# -- Ensure cores are on the same host -- 
+#BSUB -R "span[hosts=1]"
+
+# -- Memory requirements (2–4 GB) -- 
+#BSUB -R "rusage[mem=8GB]"
+#BSUB -M 8GB
+
+# -- Walltime limit (hh:mm) -- 
+#BSUB -W 00:60 
+
+# -- Email notifications (optional) --
+###BSUB -u bmapa@dtu.dk
+###BSUB -B  # at job start
+###BSUB -N  # at job end
+
+# -- Output and error files --
+#BSUB -oo output/Output_%J.out
+#BSUB -eo output/Error_%J.err
+
+job_id=${LSB_JOBID:-unknown}
+job_index=${LSB_JOBINDEX:-0}
+
+echo "=== Job ${job_id} started (index=${job_index}) ==="
+echo "Working directory: $(pwd)"
+echo "Hostname: $(hostname)"
+echo "Start time: $(date)"
+
+nodeCores=${LSB_DJOB_NUMPROC:-24}
+echo "Cores allocated by LSF (-n) = $nodeCores"
+
+# ----------------------------------------
+# OpenMP settings for reproducible performance
+# ----------------------------------------
+
+# Always print OpenMP runtime configuration
+export OMP_DISPLAY_ENV=verbose
+
+(... more ...)
+------------------------------------------------------------
+
+TERM_RUNLIMIT: job killed after reaching LSF run time limit.
+Exited with exit code 140.
+
+Resource usage summary:
+
+    CPU time :                                   15931.00 sec.
+    Max Memory :                                 502 MB
+    Average Memory :                             485.92 MB
+    Total Requested Memory :                     196608.00 MB
+    Delta Memory :                               196106.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                18
+    Run time :                                   3669 sec.
+    Turnaround time :                            3903 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <output/Error_27648877.err> for stderr output of this job.
+
